@@ -7,6 +7,23 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.btn {
+  color: #b98000;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.05px;
+  background-color: #ffc74a;
+  padding: 20px 30px;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn-large {
+  padding: 20px 50px;
+}
+
 header {
   margin: 0;
   padding: 0;
@@ -18,9 +35,62 @@ header {
   position: relative;
 }
 
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px;
+}
+
+header nav .nav-brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .nav-brand .nav-brand-image {
+  width: 51px;
+  height: 61px;
+  margin-right: 10px;
+}
+
+header nav .nav-brand h3 {
+  font-size: 30px;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+
+header nav .nav-links {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav .nav-links .nav-link {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 30px;
+}
+
 header .heading {
   position: absolute;
-  top: 35%;
+  top: 20%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -39,56 +109,92 @@ header .heading h3 {
   color: #ed6950;
 }
 
-nav {
+header .heading p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  opacity: 0.4;
+  margin-bottom: 51px;
+}
+
+header .heading h5 {
+  margin-top: 150px;
+  font-size: 18px;
+  color: #ffffff;
+  opacity: 0.9;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+header .cards-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 40px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: white;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
 }
 
-nav .nav-brand {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+header .cards-container .card {
+  width: 360px;
+  height: 433px;
+  position: relative;
+  overflow: hidden;
 }
 
-nav .nav-brand .nav-brand-image {
-  width: 51px;
-  height: 61px;
-  margin-right: 10px;
+header .cards-container .card .card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
 }
 
-nav .nav-brand h3 {
-  font-size: 30px;
+header .cards-container .card .card-image img {
+  width: 100%;
+  height: auto;
+}
+
+header .cards-container .card .card-content {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 60%);
+          transform: translate(-50%, 60%);
+  text-align: center;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+header .cards-container .card .card-content h3 {
+  font-size: 40px;
+  opacity: 0.9;
   font-weight: 700;
-  padding: 0;
   margin: 0;
-  color: #fff;
+  margin-bottom: 18px;
 }
 
-nav .nav-links {
-  list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+header .cards-container .card .card-content p {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 75px;
+  color: #ffc74a;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
-nav .nav-links .nav-link {
-  text-decoration: none;
-  color: #fff;
-  margin: 0 30px;
+header .cards-container .card:hover .card-content {
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
 }
 /*# sourceMappingURL=style.css.map */

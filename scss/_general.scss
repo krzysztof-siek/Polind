@@ -6,3 +6,20 @@ body {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+
+.btn{
+    color: #b98000;  
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.05px;
+    background-color: #ffc74a;
+    padding: 20px 30px;
+    border-radius: 30px ;
+    border: 1px solid transparent;
+    font-family: "Montserrat", sans-serif
+    }
+
+    .btn-large {
+        padding: 20px 50px;
+    }

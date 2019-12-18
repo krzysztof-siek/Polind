@@ -10,9 +10,49 @@ header {
     background-position: center;
     background-size: cover;
     position: relative;
+
+    nav {
+        display: flex;
+        flex-direction: row;   
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;    
+
+        .nav-brand {
+            display: flex;
+            align-items: center;       
+        
+            .nav-brand-image {
+                width: 51px;
+                height: 61px;
+                margin-right: 10px;          
+            }
+
+            h3 {  
+                font-size: 30px;
+                font-weight: 700;
+                padding: 0;
+                margin: 0; 
+                color: #fff;          
+            }
+        }
+
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+        
+            .nav-link {
+                text-decoration: none;
+                color: #fff;
+                margin: 0 30px;
+            }
+        }
+    
+    }
+
     .heading {
         position: absolute;
-        top:35%;
+        top:20%;
         left: 50%;
         transform: translateX(-50%);
         color: white;
@@ -20,54 +60,97 @@ header {
         font-size: 52px;
         font-weight: 700;
 
-h2 {
-    margin: 0;
-   
-}
-h3 {
-    margin: 0;
-  
-    color:#ed6950;
-}
-    }
-}
+            h2 {
+                margin: 0;   
+                }
 
-nav {
-    display: flex;
-    flex-direction: row;   
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
-    .nav-brand {
-        display: flex;
-        align-items: center;
-       
-        
-        .nav-brand-image {
-            width: 51px;
-            height: 61px;
-            margin-right: 10px;
-          
-        }
-        h3 {  
-            font-size: 30px;
-            font-weight: 700;
-            padding: 0;
-            margin: 0; 
-            color: #fff;          
+            h3 {
+                margin: 0;  
+                color:#ed6950;
+                }
+
+            p{
+                font-size: 18px;
+                font-weight: 400;
+                color: #ffffff;
+                opacity: 0.4;
+                margin-bottom: 51px;
             }
-    }
-    .nav-links {
-        list-style-type: none;
-        display: flex;
-        
-        .nav-link {
-            text-decoration: none;
-            color: #fff;
-            margin: 0 30px;
-        }
-    }
+            h5 {
+                margin-top: 150px;
+                font-size: 18px;
+                color: #ffffff;
+                opacity: 0.9;
+                font-weight: 400;
+                letter-spacing: 3px;
+            }
     
+        }
+
+   
+
+    .cards-container {
+        display: flex;
+        justify-content: space-evenly;
+        color: white;
+        position: absolute;
+        left:0;
+        width: 100%;
+        bottom: 0%;
+        transform: translateY(50%);
+
+            .card {       
+                width: 360px;
+                height: 433px;
+                position: relative;
+                overflow: hidden;
+
+                .card-image {
+                    position: absolute;
+                    top: 0;
+                    left:0;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 0;
+
+                        img {
+                            width: 100%;
+                            height: auto;                
+                        }
+                }
+
+                .card-content {
+                    position: absolute;
+                    top: 35%;
+                    left: 50%;
+                    transform: translate(-50%, 60%);
+                    text-align: center;
+                    transition: .5s;
+       
+                        h3 {           
+                            font-size: 40px;
+                            opacity: 0.9;
+                            font-weight: 700;
+                            margin: 0;
+                            margin-bottom: 18px;
+                        }
+
+                         p {
+                            font-size: 14px;
+                            text-align: center;
+                            font-weight: 400;
+                            margin: 0;
+                            margin-bottom: 75px;
+                            color: #ffc74a;
+                            transition: .5s;
+                        } 
+                }
+
+                &:hover .card-content {
+                    transform: translate(-50%, 0%);                    
+                }               
+            }
+        }
 }
 
 
