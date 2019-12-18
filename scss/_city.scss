@@ -1,0 +1,87 @@
+.city  {
+    padding: 50px 20px 100px 20px;
+    margin: 0;
+    text-align: center;
+    background-color: #F7F9FB;
+
+    h3 {
+        color: #606f81;
+        font-weight: 700;
+        margin: 0;
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+
+    .city-container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        max-width: 1171px;
+        margin: 0 auto;
+        @media (min-width: 768px) {
+            flex-direction: row;
+        }
+        
+        .info {    
+            margin-top: 50px;        
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            align-items: center;
+            justify-content: space-evenly;
+            padding-right: 40px;
+            @media (min-width: 768px) {
+                align-items: flex-start;
+                width: 80%;
+            }
+
+            h3 {
+                color: #f8c759;
+                margin: 0;
+            }
+
+            p {
+                
+                text-align: center;
+                @media (min-width: 768px) {
+                   text-align: left;
+                }
+               
+            }
+
+            .btn {
+                padding: 10px 20px;
+            }
+        }
+        .city-img {
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            @media (min-width: 768px) {
+                 width: 80%;
+                 margin-right: 30px;
+
+             }
+           
+           img {
+               width: 100%;
+           }
+            &:before {
+                display: none;
+                content: "";
+                position: absolute;
+                top:0;
+                left:0;
+                height: 100%;
+                width: 100%;
+                border: 10px solid #f8c759;;
+                z-index: -1;
+                transform: translate(3%, 3%);
+                @media (min-width: 768px) {
+                    display: inline-block;
+                 }
+            }
+        }
+    }
+}
