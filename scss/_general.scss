@@ -25,4 +25,8 @@ body {
         padding: 10px 15px;
         font-size: 12px;
         letter-spacing: 0.9;
+        @media (min-width: 1200px) {
+            font-size: 18px;
+            padding: 20px 30px;
+        }
     }
