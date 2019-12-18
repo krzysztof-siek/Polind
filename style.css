@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=latin-ext");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css");
 body {
   padding: 0;
   margin: 0;
@@ -21,13 +22,16 @@ body {
 }
 
 .btn-large {
-  padding: 20px 50px;
+  padding: 10px 15px;
+  font-size: 12px;
+  letter-spacing: 0.9;
 }
 
 header {
   margin: 0;
   padding: 0;
   height: 100vh;
+  width: 100vw;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.7))), url("../img/topBg.png");
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../img/topBg.png");
   background-position: center;
@@ -49,7 +53,7 @@ header nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 40px;
+  padding: 20px;
 }
 
 header nav .nav-brand {
@@ -62,42 +66,135 @@ header nav .nav-brand {
 }
 
 header nav .nav-brand .nav-brand-image {
-  width: 51px;
-  height: 61px;
+  width: 31px;
+  height: 41px;
   margin-right: 10px;
+  z-index: 1000;
+}
+
+@media (min-width: 768px) {
+  header nav .nav-brand .nav-brand-image {
+    width: 51px;
+    height: 61px;
+  }
+}
+
+header nav .nav-brand .nav-brand-image img {
+  height: 100%;
+  width: 100%;
 }
 
 header nav .nav-brand h3 {
-  font-size: 30px;
+  font-size: 18px;
   font-weight: 700;
   padding: 0;
   margin: 0;
   color: #fff;
+  z-index: 1000;
+}
+
+@media (min-width: 768px) {
+  header nav .nav-brand h3 {
+    font-size: 30px;
+  }
 }
 
 header nav .nav-links {
   list-style-type: none;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: .5s;
+  transition: .5s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100;
+}
+
+@media (min-width: 768px) {
+  header nav .nav-links {
+    -webkit-transition: 0;
+    transition: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: static;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: inherit;
+    height: 0;
+  }
+}
+
+header nav .nav-links.open {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 header nav .nav-links .nav-link {
   text-decoration: none;
   color: #fff;
-  margin: 0 30px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  header nav .nav-links .nav-link {
+    margin: 0 30px;
+  }
+}
+
+header nav .nav-button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  color: white;
+  z-index: 1000;
+}
+
+@media (min-width: 768px) {
+  header nav .nav-button {
+    display: none;
+  }
 }
 
 header .heading {
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   color: white;
   text-align: center;
-  font-size: 52px;
+  font-size: 32px;
   font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  header .heading {
+    font-size: 44px;
+    top: 20%;
+  }
 }
 
 header .heading h2 {
@@ -110,15 +207,21 @@ header .heading h3 {
 }
 
 header .heading p {
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 400;
   color: #ffffff;
   opacity: 0.4;
   margin-bottom: 51px;
 }
 
+@media (min-width: 768px) {
+  header .heading p {
+    font-size: 18px;
+  }
+}
+
 header .heading h5 {
-  margin-top: 150px;
+  display: none;
   font-size: 18px;
   color: #ffffff;
   opacity: 0.9;
@@ -126,7 +229,34 @@ header .heading h5 {
   letter-spacing: 3px;
 }
 
-header .cards-container {
+@media (min-width: 768px) {
+  header .heading h5 {
+    display: block;
+    margin-top: 120px;
+  }
+}
+
+header .heading .btn-heading {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  header .heading .btn-heading {
+    display: inline;
+  }
+}
+
+header .offer {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  header .offer {
+    display: block;
+  }
+}
+
+header .offer .cards-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -140,49 +270,52 @@ header .cards-container {
   bottom: 0%;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
-}
-
-header .cards-container .card {
-  width: 360px;
-  height: 433px;
-  position: relative;
   overflow: hidden;
 }
 
-header .cards-container .card .card-image {
+header .offer .cards-container .card {
+  min-width: 240px;
+  min-height: 280px;
+  position: relative;
+  overflow: hidden;
+  margin: 5px;
+}
+
+header .offer .cards-container .card .card-image {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: auto;
   width: 100%;
   z-index: 0;
 }
 
-header .cards-container .card .card-image img {
+header .offer .cards-container .card .card-image img {
   width: 100%;
   height: auto;
 }
 
-header .cards-container .card .card-content {
+header .offer .cards-container .card .card-content {
   position: absolute;
-  top: 35%;
+  top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, 60%);
-          transform: translate(-50%, 60%);
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   text-align: center;
   -webkit-transition: .5s;
   transition: .5s;
+  min-width: 200px;
 }
 
-header .cards-container .card .card-content h3 {
-  font-size: 40px;
+header .offer .cards-container .card .card-content h3 {
+  font-size: 30px;
   opacity: 0.9;
   font-weight: 700;
   margin: 0;
   margin-bottom: 18px;
 }
 
-header .cards-container .card .card-content p {
+header .offer .cards-container .card .card-content p {
   font-size: 14px;
   text-align: center;
   font-weight: 400;
@@ -193,8 +326,8 @@ header .cards-container .card .card-content p {
   transition: .5s;
 }
 
-header .cards-container .card:hover .card-content {
-  -webkit-transform: translate(-50%, 0%);
-          transform: translate(-50%, 0%);
+header .offer .cards-container .card:hover .card-content {
+  -webkit-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
 }
 /*# sourceMappingURL=style.css.map */

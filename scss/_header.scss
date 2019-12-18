@@ -2,6 +2,7 @@ header {
     margin: 0;
     padding: 0;
     height: 100vh;
+    width: 100vw;
     background: linear-gradient(
     to bottom,
     rgba(0,0,0, 0.5),
@@ -11,40 +12,101 @@ header {
     background-size: cover;
     position: relative;
 
-    nav {
+    nav {      
         display: flex;
         flex-direction: row;   
         justify-content: space-between;
-        align-items: center;
-        padding: 40px;    
+        align-items: center;        
+        padding: 20px;    
 
         .nav-brand {
             display: flex;
             align-items: center;       
         
-            .nav-brand-image {
-                width: 51px;
-                height: 61px;
-                margin-right: 10px;          
+            .nav-brand-image {               
+                width: 31px;
+                height: 41px;
+                margin-right: 10px; 
+                z-index: 1000;
+                @media (min-width: 768px) {
+                    width: 51px;
+                    height: 61px;               
+                }
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }         
             }
 
-            h3 {  
-                font-size: 30px;
+            h3 {                  
+                font-size: 18px;
                 font-weight: 700;
                 padding: 0;
                 margin: 0; 
-                color: #fff;          
+                color: #fff;  
+                z-index: 1000;
+
+                @media (min-width: 768px) {
+                   font-size: 30px;               
+                }
+
             }
         }
 
         .nav-links {
             list-style-type: none;
+            transform: translateY(-100%);
+            transition: .5s;
             display: flex;
+            flex-direction: column;
+            position: absolute;                
+            padding: 0; 
+            margin: 0;               
+            top:0;
+            left:0;
+            width: 100%;
+            height: 70vh;
+            background-color: rgba(0,0,0,0.8);
+            justify-content: space-around;
+            align-items: center;
+            z-index: 100;
+
+            @media (min-width: 768px) {
+                transition: 0;
+                display: flex;
+                position: static;
+                flex-direction: row;
+                width: inherit;
+                height: 0;               
+            }
+
+            &.open {                
+                transform: translateY(0);               
+            }
         
             .nav-link {
                 text-decoration: none;
                 color: #fff;
-                margin: 0 30px;
+                margin: 0 auto;
+                padding: 0;
+
+                @media (min-width: 768px) {
+                    margin: 0 30px;
+                                 
+                }
+            }
+        }
+        .nav-button {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 20px;
+            color: white;
+            z-index: 1000;
+
+            @media (min-width: 768px) {
+                display: none;
             }
         }
     
@@ -52,42 +114,72 @@ header {
 
     .heading {
         position: absolute;
-        top:20%;
+        top:30%;
         left: 50%;
         transform: translateX(-50%);
         color: white;
-        text-align: center;
-        font-size: 52px;
+        text-align: center;        
+        font-size: 32px;
         font-weight: 700;
 
-            h2 {
-                margin: 0;   
-                }
+        @media (min-width: 768px) {
+            font-size: 44px;
+            top:20%;
+        }
 
-            h3 {
-                margin: 0;  
-                color:#ed6950;
-                }
+        h2 {
+             margin: 0;   
+        }
 
-            p{
-                font-size: 18px;
-                font-weight: 400;
-                color: #ffffff;
-                opacity: 0.4;
-                margin-bottom: 51px;
+         h3 {
+            margin: 0;  
+            color:#ed6950;
+        }
+
+        p{
+                
+            font-size: 12px;
+            font-weight: 400;
+            color: #ffffff;
+            opacity: 0.4;
+            margin-bottom: 51px;
+
+                @media (min-width: 768px) {
+                    font-size: 18px;
             }
+        }
+
             h5 {
-                margin-top: 150px;
+                display: none;
                 font-size: 18px;
                 color: #ffffff;
                 opacity: 0.9;
                 font-weight: 400;
                 letter-spacing: 3px;
+
+                @media (min-width: 768px) {
+                    display: block;
+                    margin-top: 120px;
+                }
+            }
+            .btn-heading {
+                display: none;
+
+                @media (min-width: 768px) {
+                    display: inline;
+                }
             }
     
         }
 
    
+
+    .offer {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+        }
 
     .cards-container {
         display: flex;
@@ -98,18 +190,22 @@ header {
         width: 100%;
         bottom: 0%;
         transform: translateY(50%);
+        overflow: hidden;
+        
 
             .card {       
-                width: 360px;
-                height: 433px;
+                min-width: 240px;
+                min-height: 280px;
                 position: relative;
                 overflow: hidden;
+                margin: 5px;
+                
 
                 .card-image {
                     position: absolute;
                     top: 0;
                     left:0;
-                    height: 100%;
+                    height: auto;
                     width: 100%;
                     z-index: 0;
 
@@ -121,14 +217,16 @@ header {
 
                 .card-content {
                     position: absolute;
-                    top: 35%;
+                    top: 50%;
                     left: 50%;
-                    transform: translate(-50%, 60%);
+                    transform: translate(-50%, 0);
                     text-align: center;
-                    transition: .5s;
+                    transition: .5s;  
+                    min-width: 200px;                
+                    
        
                         h3 {           
-                            font-size: 40px;
+                            font-size: 30px;
                             opacity: 0.9;
                             font-weight: 700;
                             margin: 0;
@@ -147,10 +245,11 @@ header {
                 }
 
                 &:hover .card-content {
-                    transform: translate(-50%, 0%);                    
+                    transform: translate(-50%, -40%);       
                 }               
             }
         }
+}
 }
 
 
