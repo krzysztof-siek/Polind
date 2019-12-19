@@ -19,6 +19,7 @@ body {
   border-radius: 30px;
   border: 1px solid transparent;
   font-family: "Montserrat", sans-serif;
+  cursor: pointer;
 }
 
 .btn-large {
@@ -175,7 +176,7 @@ header nav .nav-button {
   top: 0;
   right: 0;
   padding: 20px;
-  color: white;
+  color: #ffc74a;
   z-index: 1000;
 }
 
@@ -389,7 +390,7 @@ header .heading .btn-heading {
 
 .tours {
   text-align: center;
-  background-color: #dfdfdf;
+  background-color: #f4f4f6;
   margin: 0;
   padding-top: 50px;
   padding-bottom: 60px;
@@ -502,7 +503,7 @@ header .heading .btn-heading {
   color: #8d97a5;
   border: 1px solid #8d97a5;
   letter-spacing: 1px;
-  padding: 5px 30px;
+  padding: 5px 20px;
   font-size: 14px;
   font-weight: 700;
   border-radius: 30px;
@@ -523,7 +524,7 @@ header .heading .btn-heading {
 .tours .tours-container {
   margin: 0 auto;
   margin-top: 100px;
-  background-color: #fff;
+  background-color: #f4f4f6;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -549,7 +550,7 @@ header .heading .btn-heading {
   margin: 20px;
   padding: 10px;
   padding-bottom: 50px;
-  background-color: #f4f4f6;
+  background-color: white;
   color: #c8cdd3;
   border: 1px solid transparent;
 }
@@ -583,7 +584,7 @@ header .heading .btn-heading {
 
 .city {
   padding: 50px 20px 100px 20px;
-  margin: 0;
+  margin: 0 auto;
   text-align: center;
   background-color: #F7F9FB;
 }
@@ -624,6 +625,7 @@ header .heading .btn-heading {
 }
 
 .city .city-container .info {
+  margin: 0 auto;
   margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -639,7 +641,7 @@ header .heading .btn-heading {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding-right: 40px;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -648,12 +650,14 @@ header .heading .btn-heading {
         -ms-flex-align: start;
             align-items: flex-start;
     width: 80%;
+    padding-right: 40px;
   }
 }
 
 .city .city-container .info h3 {
   color: #f8c759;
   margin: 0;
+  margin-bottom: 50px;
 }
 
 .city .city-container .info p {
@@ -668,6 +672,7 @@ header .heading .btn-heading {
 
 .city .city-container .info .btn {
   padding: 10px 20px;
+  margin-top: 50px;
 }
 
 .city .city-container .city-img {
@@ -704,6 +709,155 @@ header .heading .btn-heading {
 @media (min-width: 768px) {
   .city .city-container .city-img:before {
     display: inline-block;
+  }
+}
+
+.signup {
+  background: url("./img/enjoy-bgc.png");
+  background-position: center;
+  background-size: cover;
+  min-height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 768px) {
+  .signup {
+    height: 500px;
+  }
+}
+
+.signup h3 {
+  margin: 8px;
+  color: white;
+  font-size: 1.6rem;
+}
+
+@media (min-width: 768px) {
+  .signup h3 {
+    margin: 20px;
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .signup h3 {
+    font-size: 4rem;
+  }
+}
+
+.signup .btn {
+  padding: 5px 20px;
+  font-size: 14px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .signup .btn {
+    margin: 20px;
+    padding: 10px 25px;
+  }
+}
+
+.signup p {
+  margin: 10px;
+  color: white;
+  font-size: 10px;
+}
+
+@media (min-width: 768px) {
+  .signup p {
+    font-size: 14px;
+    margin: 20px;
+  }
+}
+
+.signup p span {
+  color: #ffc74a;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: #F7F9FB;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 768px) {
+  footer {
+    height: 300px;
+  }
+}
+
+footer .footer-img {
+  z-index: 2;
+  width: 31px;
+  height: 41px;
+}
+
+footer .footer-img img {
+  width: 100%;
+}
+
+footer p {
+  z-index: 2;
+  margin: 0;
+  color: #606f81;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+footer h1 {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  font-size: 70px;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  footer h1 {
+    font-size: 180px;
+  }
+}
+
+@media (min-width: 992px) {
+  footer h1 {
+    font-size: 240px;
+    letter-spacing: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */

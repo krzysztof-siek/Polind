@@ -1,0 +1,52 @@
+.signup  {
+  background: url('./img/enjoy-bgc.png');
+  background-position: center;
+  background-size: cover;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+align-items: center;
+@media(min-width: 768px) {
+    height: 500px;
+}
+  h3 {
+        margin: 8px;
+      color: white;
+      font-size: 1.6rem;
+      @media(min-width: 768px) {
+        margin: 20px;
+          font-size: 2.4rem;
+      }
+      @media(min-width: 992px) {
+          font-size: 4rem;
+      }
+  }
+  .btn {
+      padding: 5px 20px;
+      font-size: 14px;
+      margin: 10px;
+      cursor: pointer;
+      @media(min-width: 768px) {
+        margin: 20px;
+        padding: 10px 25px;
+    }
+   
+
+  }
+  p{
+    margin: 10px;
+      color: white;
+      font-size: 10px;
+      @media(min-width: 768px) {
+        font-size: 14px;
+        margin: 20px;
+    }
+      span {
+        color: #ffc74a;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+  }
+   
+}
