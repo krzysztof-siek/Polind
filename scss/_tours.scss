@@ -15,7 +15,7 @@
         margin: 0 auto;       
     } 
 
-    h3 {
+    .tours-main {
         margin: 0;
         font-size: 30px;
         font-weight: 700;
@@ -122,17 +122,19 @@
             padding-bottom: 50px;
             background-color:white;
             color:#c8cdd3;
-            border: 1px solid transparent;
+            box-shadow: 5px 5px 5px -4px rgba(0,0,0,0.75);
 
             &:hover {
-                border: 1px solid #ffc74a;
+                transform: scale(1.02);
+                box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.75);
+
             }
 
-            h3 {
+            .tours-main {
                 margin: 20px;
             }
 
-            h4 {                
+            .tour-region {                
                 margin: 10px 10px 50px 10px;
             }
 

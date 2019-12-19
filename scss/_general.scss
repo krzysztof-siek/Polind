@@ -20,6 +20,13 @@ body {
     border: 1px solid transparent;
     font-family: "Montserrat", sans-serif;
     cursor: pointer;
+    &:hover {
+        background-color: #fabb32;  
+    }
+    }
+
+    .btn-heading {
+        padding: 10px 20px;
     }
 
     .btn-large {
